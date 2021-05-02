@@ -49,20 +49,25 @@ const books = [
 function BookList() {
   return <section className="booklist">
     {books.map((book) => {
-      return <Book key={book.id} book={book}></Book>
+      return <Book key={book.id} {...book}></Book>
     })}
   </section>
 }
 
 const Book = (props) => {
-  console.log(`Props: ${props.book}`)
-  const { img, title, author } = props.book; //  Object Destructuring.
+  const { img, title, author } = props; //  Object Destructuring.
+  //  Attribute, eventHandler
+  //  onClick, onMouseOver
+  const clickHandler = () => {
+    alert("Hello World");
+  }
   return (
     <article className="book" style={{ border: "solid 1px" }}>
     <img src={img} alt="" />
     <h1>{title}</h1>
       <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>{author}
       </h4>
+      <button type="button" onClick={clickHandler}>Reference Example</button>
     </article>
   )
 }
