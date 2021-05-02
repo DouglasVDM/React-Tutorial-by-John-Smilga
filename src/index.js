@@ -28,24 +28,18 @@ ReactDom.render(<Greeting />, document.getElementById("root"));
 function BookList() {
   return <section className="booklist">
     <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
-    <Book />
   </section>
 }
-function Book() {
+const author = "by John Smilga";
+const imgSrc = "https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj";
+
+const Book = () => {
+  const title = "React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks";
   return <article className="book" style={{ border: "solid 1px" }}>
-    <Image />
-    <Name />
-    <Author />
+    <img src={ imgSrc } alt="" />
+    <h1>{title}</h1>
+    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>{ author }</h4>
   </article>
 }
-const Image = () => <img src="https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj" alt="" />;
-const Name = () => <h1>React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks</h1>;
-const Author = () => <h4 style={{color:"#617d98", fontSize:"0.75rem", marginTop:"0.25rem"}}>by John Smilga</h4>
 
 ReactDom.render(<BookList />, document.getElementById("root"));
