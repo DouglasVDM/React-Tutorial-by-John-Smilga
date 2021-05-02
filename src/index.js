@@ -43,7 +43,15 @@ function BookList() {
       img={firstBook.img}
       title={firstBook.title}
       author={firstBook.author}      
-    />
+    >
+      <p>
+        lorem lorem lorem lorem lorem lorem
+        lorem lorem lorem lorem lorem lorem
+        lorem lorem lorem lorem lorem lorem
+        lorem lorem lorem lorem lorem lorem
+        lorem lorem lorem lorem lorem lorem
+      </p>
+    </Book>
 
     <Book
       img={secondBook.img}
@@ -53,13 +61,14 @@ function BookList() {
   </section>
 }
 
-const Book = ({ img, title, author }) => {
+const Book = ({ img, title, author, children }) => {
   // const { img, title, author } = props; //  Object Destructuring.
   return (
     <article className="book" style={{ border: "solid 1px" }}>
     <img src={img} alt="" />
     <h1>{title}</h1>
-    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>{author}</h4>   
+      <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>{author}</h4>
+    {children}  
     </article>
   )
 }
