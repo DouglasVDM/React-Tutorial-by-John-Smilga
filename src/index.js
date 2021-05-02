@@ -45,11 +45,8 @@ function BookList() {
       author={firstBook.author}      
     >
       <p>
-        lorem lorem lorem lorem lorem lorem
-        lorem lorem lorem lorem lorem lorem
-        lorem lorem lorem lorem lorem lorem
-        lorem lorem lorem lorem lorem lorem
-        lorem lorem lorem lorem lorem lorem
+        lorem lorem lorem lorem lorem lorem, lorem lorem lorem lorem lorem lorem.
+        lorem lorem lorem lorem lorem lorem, lorem lorem lorem lorem lorem lorem, lorem lorem lorem lorem lorem lorem.
       </p>
     </Book>
 
@@ -61,8 +58,8 @@ function BookList() {
   </section>
 }
 
-const Book = ({ img, title, author, children }) => {
-  // const { img, title, author } = props; //  Object Destructuring.
+const Book = (props) => {
+  const { img, title, author, children } = props; //  Object Destructuring.
   return (
     <article className="book" style={{ border: "solid 1px" }}>
     <img src={img} alt="" />
