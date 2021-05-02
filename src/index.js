@@ -64,7 +64,7 @@ const Book = (props) => {
   return (
     <article className="book" style={{ border: "solid 1px" }}>
     <img src={img} alt="" />
-    <h1>{title}</h1>
+    <h1 onClick={()=>console.log(`Title:${title}`)}>{title}</h1>
       <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>{author}
       </h4>
       <button type="button" onClick={clickHandler}>Reference Example</button>
