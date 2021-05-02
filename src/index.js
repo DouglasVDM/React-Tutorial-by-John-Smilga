@@ -35,18 +35,25 @@ const books = [
     img: "chrome-extension://pachckjkecffpdphbpmfolblodfkgbhl/images/vidiq_playplus.png",
     title: "VidIQ Icon",
     author: "by VidIQ",
-  }
+  },
+  {
+    img: "https://yt3.ggpht.com/yti/ANoDKi72ICb-uknZZA71GLUKhmdsMfEOfwCPn2DsRqTqug=s88-c-k-c0x00ffffff-no-rj-mo",
+    title: "Profile Piture",
+    author: "by Douglas",
+  },
 ];
-const names = ["James", "John", "Jim"];
-const newNames = names.map((name) => <h1>{name}</h1>);
+
 function BookList() {
   return <section className="booklist">
-    {newNames}
+    {books.map((book) => {
+      return <Book book={book}></Book>
+    })}
   </section>
 }
 
 const Book = (props) => {
-  const { img, title, author } = props; //  Object Destructuring.
+  console.log(`Props: ${props.book}`)
+  const { img, title, author } = props.book; //  Object Destructuring.
   return (
     <article className="book" style={{ border: "solid 1px" }}>
     <img src={img} alt="" />
