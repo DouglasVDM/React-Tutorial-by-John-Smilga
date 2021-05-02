@@ -1,11 +1,13 @@
 import React from "react"
 import ReactDom from "react-dom";
 
+//  CSS
+import "./index.css";
 
 function Greeting() {
   return (
 
-    <div>
+    <div className="booklist">
       <FirstComponent />
       <Person />
       <Message />
@@ -24,14 +26,26 @@ const FirstComponent = () => <h4>This is Douglas and this is my first component.
 ReactDom.render(<Greeting />, document.getElementById("root"));
 
 function BookList() {
-  return <secion>
-    <Image />
+  return <section className="booklist">
     <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+    <Book />
+  </section>
+}
+function Book() {
+  return <article className="book">
+    <Image />
+    <Name />
     <Author />
-  </secion>
+  </article>
 }
 const Image = () => <img src="https://yt3.ggpht.com/ytc/AAUvwniaHN7MZyFEiNvdHuKMzIWnDF604Z2--O4GCMq-FA=s48-c-k-c0x00ffffff-no-rj" alt="" />;
-const Book = () => <h4>React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks</h4>;
+const Name = () => <h1>React Tutorial - Fundamentals, Hooks, Context API, React Router, Custom Hooks</h1>;
 const Author = () => <h4>by John Smilga</h4>
 
 ReactDom.render(<BookList />, document.getElementById("root"));
