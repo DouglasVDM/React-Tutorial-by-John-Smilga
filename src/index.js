@@ -53,8 +53,8 @@ function BookList() {
   </section>
 }
 
-const Book = (props) => {
-  const { img, title, author } = props; //  Object Destructuring.
+const Book = ({ img, title, author }) => {
+  // const { img, title, author } = props; //  Object Destructuring.
   return (
     <article className="book" style={{ border: "solid 1px" }}>
     <img src={img} alt="" />
