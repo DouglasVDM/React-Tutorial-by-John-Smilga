@@ -54,11 +54,12 @@ function BookList() {
 }
 
 const Book = (props) => {
+  const { img, title, author } = props; //  Object Destructuring.
   return (
     <article className="book" style={{ border: "solid 1px" }}>
-    <img src={props.img} alt="" />
-    <h1>{props.title}</h1>
-    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>{props.author}</h4>   
+    <img src={img} alt="" />
+    <h1>{title}</h1>
+    <h4 style={{ color: "#617d98", fontSize: "0.75rem", marginTop: "0.25rem" }}>{author}</h4>   
     </article>
   )
 }
