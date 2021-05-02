@@ -38,7 +38,7 @@ function BookList() {
   </section>
 }
 function Book() {
-  return <article className="book">
+  return <article className="book" style={{ border: "solid 1px" }}>
     <Image />
     <Name />
     <Author />
