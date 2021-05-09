@@ -6,7 +6,7 @@ import "./index.css";
 
 import { books } from "./books";  //  Import a Named Export.
 import SpecificBook from "./Book"  //  Import Default Export.
-import { greeting } from "./thatthing/thatthing"; //  Import from another Folder.
+import { greeting } from "./thatthing/thatthing"; //  Import File from Sub-Folder.
 
 function Greeting() {
   return (
